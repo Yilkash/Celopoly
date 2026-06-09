@@ -17,3 +17,4 @@ states/
 node_modules/
 dist/
 .env
+contracts/lib/openzeppelin-contracts/
