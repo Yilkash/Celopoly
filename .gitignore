@@ -13,3 +13,7 @@ states/
 # Optional
 .env
 .env.localcontracts/lib/openzeppelin-contracts/
+
+node_modules/
+dist/
+.env
