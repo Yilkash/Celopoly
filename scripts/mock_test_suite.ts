@@ -135,3 +135,8 @@ test("should convert microSTX bigints to STX decimal representation", () => {
   expect(formatSTX(1500000n)).toBe("1.500000");
 });
 
+// Step 95
+test("should convert microSTX numbers to STX floats", () => {
+  expect(microSTXtoSTX(2500000)).toBe(2.5);
+});
+
