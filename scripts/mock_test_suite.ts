@@ -145,3 +145,9 @@ test("should convert STX floats to microSTX values", () => {
   expect(stxToMicroSTX(3.14)).toBe(3140000);
 });
 
+// Step 97
+test("should return true for case-insensitive address matches", () => {
+  expect(addressEquals("0xAbC", "0xabc")).toBe(true);
+  expect(addressEquals("0xAbC", "0xdef")).toBe(false);
+});
+
