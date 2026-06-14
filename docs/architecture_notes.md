@@ -28,3 +28,9 @@ When broadcasting transactions at high frequency on Stacks, our orchestrator acc
 ### Daily Active Users (DAU) Vitality Metrics
 The primary objective of our automated Titan Army deployment is driving transaction volume consistency. By distributing activity across randomized interaction pathways (bet placement, pool creation, contract verification calls) and spacing operations organically, we simulate a natural user cohort distribution.
 
+
+<!-- Step 56 -->
+
+### Wallet Balance Auditing Cycle
+Wallet balances across the Stacks and Celo armies are audited at the start of every daily pass. Sub-wallets with gas balances below safe thresholds are automatically queued for replenishment (0.08 CELO on Celo, 0.03 STX on Stacks) to ensure transaction continuity.
+
