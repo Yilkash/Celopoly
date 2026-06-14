@@ -54,3 +54,10 @@ test("should calculate exponential backoff limits with jitter", () => {
   expect(val).toBeLessThanOrEqual(6000);
 });
 
+// Step 82
+test("should format unix timestamp to ISO format", () => {
+  const epoch = 1715456200;
+  const formatted = formatTimestamp(epoch);
+  expect(formatted.startsWith("2026-")).toBe(true);
+});
+
