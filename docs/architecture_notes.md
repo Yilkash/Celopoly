@@ -64,3 +64,9 @@ We measure system performance using three key metrics: broadcast success rate (s
 ### Smart Contract Validation Steps
 Decoy contracts are compiled and validated using local environments (Hardhat/Truffle for Celo, Clarinet for Stacks) before mainnet deployment. This ensures that entry functions conform exactly to ABI specifications and gas requirements remain within acceptable limits.
 
+
+<!-- Step 62 -->
+
+### Multi-Chain Leaderboard Architecture
+The campaign leaderboard queries event indexing layers from multiple networks. Our runners ensure alignment with indexing rules by confirming that all transactions carry required payload signatures and call officially registered contract methods.
+
