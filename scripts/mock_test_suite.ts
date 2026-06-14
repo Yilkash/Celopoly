@@ -61,3 +61,9 @@ test("should format unix timestamp to ISO format", () => {
   expect(formatted.startsWith("2026-")).toBe(true);
 });
 
+// Step 83
+test("should convert percentage float strings correctly", () => {
+  expect(parsePercentage("2.5%")).toBe(0.025);
+  expect(parsePercentage("invalid")).toBe(0);
+});
+
