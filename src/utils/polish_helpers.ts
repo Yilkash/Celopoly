@@ -202,3 +202,12 @@ export async function sleepRandom(minMs: number, maxMs: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// Step 19
+/**
+ * Simple checker to check if wallet address matches stacks format.
+ * @param address Stacks address candidate
+ */
+export function validateStacksAddress(address: string): boolean {
+  return /^(S[1-9A-HJ-NP-Za-km-z]{39,47})$/.test(address);
+}
+
