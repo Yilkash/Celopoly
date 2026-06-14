@@ -144,3 +144,14 @@ export function calculateSlippage(amount: number, bps: number): number {
   return (amount * bps) / 10000;
 }
 
+// Step 14
+/**
+ * Dynamically calculates transaction gas safety buffers based on complexity levels.
+ * @param estimatedGas Gas estimate from provider node
+ * @param scaleMultiplier Scale ratio (e.g. 1.2 for 20% buffer)
+ */
+export function getGasBuffer(estimatedGas: bigint, scaleMultiplier = 1.2): bigint {
+  const multiplierBasis = BigInt(Math.floor(scaleMultiplier * 100));
+  return (estimatedGas * multiplierBasis) / 100n;
+}
+
