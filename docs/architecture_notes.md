@@ -136,3 +136,9 @@ To ensure high availability, the TS client initializes with a primary RPC URL an
 ### Secure Secret Management in Production
 In production, environment secrets are injected at runtime using secure container configurations. Private keys and sensitive mnemonics are never written to disk in plain text or embedded inside static files.
 
+
+<!-- Step 74 -->
+
+### Dynamic Block-Time Adjustment Logic
+Our delay logic adjusts to average block times. If average Stacks block mining slows down during congestion, the runner automatically extends its sleep window to allow the mempool backlog to clear before launching the next pass.
+
