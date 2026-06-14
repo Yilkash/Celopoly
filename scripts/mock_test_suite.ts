@@ -34,3 +34,10 @@ test("should clamp numbers correctly within bounds", () => {
   expect(clamp(5, 0, 10)).toBe(5);
 });
 
+// Step 79
+test("should generate random number inside constraints", () => {
+  const val = randomInRange(5, 10);
+  expect(val).toBeGreaterThanOrEqual(5);
+  expect(val).toBeLessThanOrEqual(10);
+});
+
