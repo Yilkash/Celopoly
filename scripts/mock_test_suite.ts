@@ -159,3 +159,10 @@ test("should generate dynamic string identifier with suitable length", () => {
   expect(id1.length).toBeGreaterThan(10);
 });
 
+// Step 99
+test("should truncate text descriptions correctly if exceeding limit", () => {
+  const input = "A very long description message detailing contract executions";
+  expect(truncateText(input, 10)).toBe("A very lon...");
+  expect(truncateText("short", 10)).toBe("short");
+});
+
