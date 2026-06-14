@@ -166,3 +166,11 @@ test("should truncate text descriptions correctly if exceeding limit", () => {
   expect(truncateText("short", 10)).toBe("short");
 });
 
+// Step 100
+test("should delay execution by specified ms", async () => {
+  const start = Date.now();
+  await delay(10);
+  const elapsed = Date.now() - start;
+  expect(elapsed).toBeGreaterThanOrEqual(9);
+});
+
