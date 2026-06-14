@@ -134,3 +134,13 @@ export function fromHex(hex: string): string {
   return str;
 }
 
+// Step 13
+/**
+ * Calculates the maximum expected slippage value.
+ * @param amount Original transaction volume
+ * @param bps Slippage basis points (1 bps = 0.01%)
+ */
+export function calculateSlippage(amount: number, bps: number): number {
+  return (amount * bps) / 10000;
+}
+
