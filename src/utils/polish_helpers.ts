@@ -107,3 +107,16 @@ export function validateAmount(amount: string): boolean {
   return !isNaN(value) && value > 0;
 }
 
+// Step 11
+/**
+ * Converts a standard string into its hexadecimal representation.
+ * @param str The raw input string
+ */
+export function toHex(str: string): string {
+  let hex = '';
+  for (let i = 0; i < str.length; i++) {
+    hex += '' + str.charCodeAt(i).toString(16);
+  } 
+  return '0x' + hex;
+}
+
