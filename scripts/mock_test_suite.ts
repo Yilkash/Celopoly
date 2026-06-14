@@ -109,3 +109,10 @@ test("should match standard hexadecimal pattern criteria for private keys", () =
   expect(isValidPrivateKey("shortkey")).toBe(false);
 });
 
+// Step 91
+test("should return generic fallback if JSON parsing fails", () => {
+  const fallback = { ok: false };
+  const result = safeJSONParse("invalidJSON", fallback);
+  expect(result).toBe(fallback);
+});
+
