@@ -167,3 +167,13 @@ export function formatNumberCompact(num: number): string {
   return num.toString();
 }
 
+// Step 16
+/**
+ * Confirms if a private key string possesses valid formatting parameters.
+ * @param pk Target private key string candidate
+ */
+export function isValidPrivateKey(pk: string): boolean {
+  const cleanPk = pk.startsWith('0x') ? pk.slice(2) : pk;
+  return /^[a-fA-F0-9]{64}$/.test(cleanPk);
+}
+
