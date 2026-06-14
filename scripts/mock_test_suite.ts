@@ -20,3 +20,10 @@ test("should truncate EVM and Stacks addresses correctly", () => {
   expect(result).toBe("0xdd...4344");
 });
 
+// Step 77
+test("should format Wei to human-readable decimals", () => {
+  const weiVal = 1250000000000000000n; // 1.25 Celo
+  const formatted = formatWei(weiVal, 2);
+  expect(formatted).toBe("1.25");
+});
+
