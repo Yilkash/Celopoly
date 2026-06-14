@@ -10,3 +10,9 @@ Our runner infrastructure leverages Stacks microblocks to ensure maximum through
 ### Mempool Nonce Conflict Resolution
 To prevent block transaction drops due to conflicting nonces under concurrency, we utilize an auto-recovery nonce synchronization protocol. Whenever an API query detects a duplicate broadcast request or a mempool nonce collision (`ConflictingNonceInMempool`), the worker updates its local cache registry to bypass the block sequence, shifting remaining operations to the next validation cycle.
 
+
+<!-- Step 53 -->
+
+### Gas Price Surge Mitigation on CeloNetwork
+While transaction costs on the Celo Mainnet are extremely low, network activity spikes can elevate minimum fee requirements. Our sub-wallets utilize a dynamic fee buffer calculation (gas limits are scaled by 1.25x of the estimated gas) to prevent transactions from getting stuck in the block sequencer due to insufficient allocated gas.
+
