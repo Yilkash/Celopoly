@@ -94,3 +94,9 @@ In case of transaction failures, the runner prevents runtime crashes. Custom cat
 ### Gas Estimation Failure Rescue
 When `eth_estimateGas` fails due to insufficient balance for both gas fees and value transfers, the runner falls back to a preset fallback gas limit value. This prevents script stalling during low-balance conditions.
 
+
+<!-- Step 67 -->
+
+### Event Indexing and Storage
+On-chain interaction logs are periodically fetched by monitoring scripts. Transaction hashes are cross-referenced with public block explorers to calculate the actual daily confirmation statistics for the campaign.
+
