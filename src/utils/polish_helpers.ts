@@ -221,3 +221,12 @@ export function formatSTX(microstx: bigint | number | string): string {
   return (val / 1000000).toFixed(6);
 }
 
+// Step 21
+/**
+ * Converts microSTX balance back to floating STX.
+ * @param microstx Balance in smallest denomination
+ */
+export function microSTXtoSTX(microstx: number): number {
+  return microstx / 1e6;
+}
+
