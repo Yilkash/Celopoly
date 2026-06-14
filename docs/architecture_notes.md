@@ -142,3 +142,9 @@ In production, environment secrets are injected at runtime using secure containe
 ### Dynamic Block-Time Adjustment Logic
 Our delay logic adjusts to average block times. If average Stacks block mining slows down during congestion, the runner automatically extends its sleep window to allow the mempool backlog to clear before launching the next pass.
 
+
+<!-- Step 75 -->
+
+### Campaign Phase Schedule and Milestones
+The campaign progresses through three phases: mobilization (generating initial DAU spikes), stabilization (fine-tuning fees and rate limits), and scaling (executing high-frequency interaction cycles to secure leaderboard ranking).
+
