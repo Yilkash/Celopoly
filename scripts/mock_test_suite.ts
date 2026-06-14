@@ -84,3 +84,9 @@ test("should convert hex string back to ascii text", () => {
   expect(fromHex("0x616263")).toBe("abc");
 });
 
+// Step 87
+test("should compute proper slippage basis values", () => {
+  const slippage = calculateSlippage(10000, 50); // 50 bps = 0.5%
+  expect(slippage).toBe(50);
+});
+
