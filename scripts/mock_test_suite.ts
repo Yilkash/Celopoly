@@ -130,3 +130,8 @@ test("should validate stacks addresses format", () => {
   expect(validateStacksAddress("invalidAddress")).toBe(false);
 });
 
+// Step 94
+test("should convert microSTX bigints to STX decimal representation", () => {
+  expect(formatSTX(1500000n)).toBe("1.500000");
+});
+
