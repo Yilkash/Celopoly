@@ -143,3 +143,12 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Step 44 */
+
+.badge-status {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
