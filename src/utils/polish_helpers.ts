@@ -155,3 +155,15 @@ export function getGasBuffer(estimatedGas: bigint, scaleMultiplier = 1.2): bigin
   return (estimatedGas * multiplierBasis) / 100n;
 }
 
+// Step 15
+/**
+ * Compactly formats large numbers to K, M, B notations.
+ * @param num Raw input number
+ */
+export function formatNumberCompact(num: number): string {
+  if (num >= 1e9) return (num / 1e9).toFixed(1) + 'B';
+  if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
+  if (num >= 1e3) return (num / 1e3).toFixed(1) + 'K';
+  return num.toString();
+}
+
