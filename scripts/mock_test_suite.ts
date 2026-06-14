@@ -47,3 +47,10 @@ test("should identify valid Celo address format", () => {
   expect(isValidCeloAddress("invalidAddress")).toBe(false);
 });
 
+// Step 81
+test("should calculate exponential backoff limits with jitter", () => {
+  const val = calculateBackoff(2, 1000);
+  expect(val).toBeGreaterThanOrEqual(2000);
+  expect(val).toBeLessThanOrEqual(6000);
+});
+
