@@ -32,3 +32,10 @@
   transform: scale(1.025);
 }
 
+/* Step 30 */
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
