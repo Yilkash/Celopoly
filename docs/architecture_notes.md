@@ -124,3 +124,9 @@ Verification operations apply a strict 30-second timeout limit. If a node fails 
 ### Frontend Dashboard State Synchronization
 The frontend UI polls indexing APIs to display live transaction counters. State synchronization hooks handle eventual consistency issues, merging local mempool state with confirmed on-chain historical records.
 
+
+<!-- Step 72 -->
+
+### API Fallback Endpoints Configurations
+To ensure high availability, the TS client initializes with a primary RPC URL and a list of backup public nodes. If primary requests fail with server errors, the client transparently switches to the next fallback node.
+
