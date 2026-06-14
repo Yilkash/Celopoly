@@ -211,3 +211,13 @@ export function validateStacksAddress(address: string): boolean {
   return /^(S[1-9A-HJ-NP-Za-km-z]{39,47})$/.test(address);
 }
 
+// Step 20
+/**
+ * Formats microSTX values into decimal STX format.
+ * @param microstx Amount in microSTX
+ */
+export function formatSTX(microstx: bigint | number | string): string {
+  const val = Number(microstx);
+  return (val / 1000000).toFixed(6);
+}
+
