@@ -52,3 +52,9 @@ To ensure organic behavior logs, transaction patterns are randomized. The orches
 ### Security Key Rotation Policy
 Private keys for the active Titan Army wallets are dynamically generated and stored in a secure local JSON registry (`celo_titan_army.json` and `.titan_army.json`). These local registry files are ignored by version control to avoid exposure, and master keys are stored strictly inside environment variables.
 
+
+<!-- Step 60 -->
+
+### Performance Monitoring Metrics
+We measure system performance using three key metrics: broadcast success rate (successful mempool entry), block inclusion rate (on-chain confirmations), and gas efficiency (ratio of fee spent to transaction count). Logs are aggregated under local logs for easy diagnostics.
+
