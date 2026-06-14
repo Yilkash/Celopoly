@@ -70,3 +70,9 @@ Decoy contracts are compiled and validated using local environments (Hardhat/Tru
 ### Multi-Chain Leaderboard Architecture
 The campaign leaderboard queries event indexing layers from multiple networks. Our runners ensure alignment with indexing rules by confirming that all transactions carry required payload signatures and call officially registered contract methods.
 
+
+<!-- Step 63 -->
+
+### Network Health Monitoring Hooks
+The orchestrator script executes pre-flight network checks before starting any pass. If RPC response times exceed 5000ms or block height indexing lags behind network height, the orchestrator triggers an automatic cooldown sleep sequence.
+
