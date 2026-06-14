@@ -97,3 +97,13 @@ export function parsePercentage(value: string): number {
   return parsed / 100;
 }
 
+// Step 10
+/**
+ * Validates if the input token amount is a positive, valid float.
+ * @param amount String value representing numerical amount
+ */
+export function validateAmount(amount: string): boolean {
+  const value = parseFloat(amount);
+  return !isNaN(value) && value > 0;
+}
+
