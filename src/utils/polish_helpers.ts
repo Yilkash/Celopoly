@@ -191,3 +191,14 @@ export function safeJSONParse<T>(str: string, fallback: T): T {
   }
 }
 
+// Step 18
+/**
+ * Delays execution by a random amount within constraints.
+ * @param minMs Minimum delay in ms
+ * @param maxMs Maximum delay in ms
+ */
+export async function sleepRandom(minMs: number, maxMs: number): Promise<void> {
+  const ms = Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
