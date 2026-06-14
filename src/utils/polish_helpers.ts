@@ -76,3 +76,13 @@ export function calculateBackoff(attempt: number, base = 1000): number {
   return Math.floor(temp + jitter);
 }
 
+// Step 8
+/**
+ * Formats a Unix timestamp into a standardized ISO date-time string.
+ * @param timestamp Epoch timestamp in seconds or milliseconds
+ */
+export function formatTimestamp(timestamp: number): string {
+  const ms = timestamp < 10000000000 ? timestamp * 1000 : timestamp;
+  return new Date(ms).toISOString();
+}
+
