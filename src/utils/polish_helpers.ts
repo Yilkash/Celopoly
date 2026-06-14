@@ -34,3 +34,14 @@ export function delay(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// Step 4
+/**
+ * Clamps a number between a minimum and maximum value.
+ * @param val The input value
+ * @param min Minimum boundary
+ * @param max Maximum boundary
+ */
+export function clamp(val: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, val));
+}
+
