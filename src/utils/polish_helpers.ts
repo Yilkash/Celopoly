@@ -177,3 +177,17 @@ export function isValidPrivateKey(pk: string): boolean {
   return /^[a-fA-F0-9]{64}$/.test(cleanPk);
 }
 
+// Step 17
+/**
+ * Attempts a safe JSON parse, returning fallback if error occurs.
+ * @param str Target json formatted string
+ * @param fallback Return value when parse fails
+ */
+export function safeJSONParse<T>(str: string, fallback: T): T {
+  try {
+    return JSON.parse(str) as T;
+  } catch (err) {
+    return fallback;
+  }
+}
+
