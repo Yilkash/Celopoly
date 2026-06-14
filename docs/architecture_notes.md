@@ -112,3 +112,9 @@ Replenishments are limited to once per 24 hours per wallet. This ceiling prevent
 ### Mempool Pruning and Gas Fee Bumping
 Transactions that remain unconfirmed for more than 6 hours are considered stale. The next runner pass automatically issues a replacement transaction with an identical nonce and a 20% higher gas fee to replace the stale tx.
 
+
+<!-- Step 70 -->
+
+### Transaction Verification Timeouts
+Verification operations apply a strict 30-second timeout limit. If a node fails to return a transaction receipt or confirmation within this window, the action is flagged as pending and the loop advances to the next wallet.
+
