@@ -54,3 +54,11 @@
   gap: 1.5rem;
 }
 
+/* Step 33 */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
