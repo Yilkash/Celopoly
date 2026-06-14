@@ -88,3 +88,9 @@ To maximize yields on Stacks, our orchestrator tracks lockup cycles. Sub-wallets
 ### Error Handling and Auto-Recovery Flow
 In case of transaction failures, the runner prevents runtime crashes. Custom catch blocks evaluate the error code (e.g. timeout, revert, node rate limit) and log warnings while preserving process execution state.
 
+
+<!-- Step 66 -->
+
+### Gas Estimation Failure Rescue
+When `eth_estimateGas` fails due to insufficient balance for both gas fees and value transfers, the runner falls back to a preset fallback gas limit value. This prevents script stalling during low-balance conditions.
+
