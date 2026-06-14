@@ -120,3 +120,17 @@ export function toHex(str: string): string {
   return '0x' + hex;
 }
 
+// Step 12
+/**
+ * Converts a hexadecimal string back to ASCII text.
+ * @param hex Hex representation starting with 0x
+ */
+export function fromHex(hex: string): string {
+  const cleanHex = hex.startsWith('0x') ? hex.slice(2) : hex;
+  let str = '';
+  for (let i = 0; i < cleanHex.length; i += 2) {
+    str += String.fromCharCode(parseInt(cleanHex.substr(i, 2), 16));
+  }
+  return str;
+}
+
