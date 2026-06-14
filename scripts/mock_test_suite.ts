@@ -90,3 +90,9 @@ test("should compute proper slippage basis values", () => {
   expect(slippage).toBe(50);
 });
 
+// Step 88
+test("should apply percentage multiplier buffer for gas estimate", () => {
+  const bufferVal = getGasBuffer(50000n, 1.25);
+  expect(bufferVal).toBe(62500n);
+});
+
