@@ -55,3 +55,12 @@ export function randomInRange(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Step 6
+/**
+ * Validates standard EVM address structure using regex.
+ * @param address Target hex address
+ */
+export function isValidCeloAddress(address: string): boolean {
+  return /^0x[a-fA-F0-9]{40}$/.test(address);
+}
+
