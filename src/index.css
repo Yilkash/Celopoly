@@ -179,3 +179,11 @@
   box-shadow: 0 0 0 2px var(--theme-bg, #000), 0 0 0 4px var(--theme-accent, #00ff87);
 }
 
+/* Step 49 */
+
+.heading-hero {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
