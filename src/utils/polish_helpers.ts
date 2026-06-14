@@ -64,3 +64,15 @@ export function isValidCeloAddress(address: string): boolean {
   return /^0x[a-fA-F0-9]{40}$/.test(address);
 }
 
+// Step 7
+/**
+ * Calculates exponential backoff retry delays with jitter.
+ * @param attempt Current retry attempt index
+ * @param base Base delay in milliseconds
+ */
+export function calculateBackoff(attempt: number, base = 1000): number {
+  const temp = Math.min(30000, base * Math.pow(2, attempt));
+  const jitter = temp * 0.5 * (Math.random() * 2 - 1);
+  return Math.floor(temp + jitter);
+}
+
