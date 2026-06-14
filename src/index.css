@@ -7,3 +7,9 @@
   border-radius: 16px;
 }
 
+/* Step 27 */
+
+.text-glow {
+  text-shadow: 0 0 8px var(--theme-glow-color, rgba(0, 255, 128, 0.4));
+}
+
