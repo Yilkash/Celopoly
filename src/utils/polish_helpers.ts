@@ -250,3 +250,11 @@ export function addressEquals(addr1: string, addr2: string): boolean {
   return addr1.toLowerCase() === addr2.toLowerCase();
 }
 
+// Step 24
+/**
+ * Generates a clean uuid-like random identifier for mock tracking.
+ */
+export function generateId(): string {
+  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
+
