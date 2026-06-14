@@ -62,3 +62,11 @@
   align-items: center;
 }
 
+/* Step 34 */
+
+.text-gradient {
+  background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
