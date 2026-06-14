@@ -27,3 +27,10 @@ test("should format Wei to human-readable decimals", () => {
   expect(formatted).toBe("1.25");
 });
 
+// Step 78
+test("should clamp numbers correctly within bounds", () => {
+  expect(clamp(15, 0, 10)).toBe(10);
+  expect(clamp(-5, 0, 10)).toBe(0);
+  expect(clamp(5, 0, 10)).toBe(5);
+});
+
