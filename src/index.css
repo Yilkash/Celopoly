@@ -152,3 +152,10 @@
   border-radius: 9999px;
 }
 
+/* Step 45 */
+
+.card-interactive:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
