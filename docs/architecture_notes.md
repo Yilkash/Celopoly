@@ -106,3 +106,9 @@ On-chain interaction logs are periodically fetched by monitoring scripts. Transa
 ### Sub-Wallet Replenishment Rules
 Replenishments are limited to once per 24 hours per wallet. This ceiling prevents a failing contract or a duplicate execution loop from rapidly draining the master wallet's funds.
 
+
+<!-- Step 69 -->
+
+### Mempool Pruning and Gas Fee Bumping
+Transactions that remain unconfirmed for more than 6 hours are considered stale. The next runner pass automatically issues a replacement transaction with an identical nonce and a 20% higher gas fee to replace the stale tx.
+
