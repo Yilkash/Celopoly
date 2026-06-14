@@ -74,3 +74,8 @@ test("should identify positive numerical float strings as valid", () => {
   expect(validateAmount("zero")).toBe(false);
 });
 
+// Step 85
+test("should convert input string to correct hexadecimal format", () => {
+  expect(toHex("abc")).toBe("0x616263");
+});
+
