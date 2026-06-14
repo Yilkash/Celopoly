@@ -76,3 +76,9 @@ The campaign leaderboard queries event indexing layers from multiple networks. O
 ### Network Health Monitoring Hooks
 The orchestrator script executes pre-flight network checks before starting any pass. If RPC response times exceed 5000ms or block height indexing lags behind network height, the orchestrator triggers an automatic cooldown sleep sequence.
 
+
+<!-- Step 64 -->
+
+### Stacking Rewards Optimization Model
+To maximize yields on Stacks, our orchestrator tracks lockup cycles. Sub-wallets hold minimum microSTX required for execution gas, and surplus STX is funneled back to the master wallet to qualify for pool participation rewards.
+
