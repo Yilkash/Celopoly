@@ -100,3 +100,9 @@ When `eth_estimateGas` fails due to insufficient balance for both gas fees and v
 ### Event Indexing and Storage
 On-chain interaction logs are periodically fetched by monitoring scripts. Transaction hashes are cross-referenced with public block explorers to calculate the actual daily confirmation statistics for the campaign.
 
+
+<!-- Step 68 -->
+
+### Sub-Wallet Replenishment Rules
+Replenishments are limited to once per 24 hours per wallet. This ceiling prevents a failing contract or a duplicate execution loop from rapidly draining the master wallet's funds.
+
