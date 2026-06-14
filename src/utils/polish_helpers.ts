@@ -230,3 +230,12 @@ export function microSTXtoSTX(microstx: number): number {
   return microstx / 1e6;
 }
 
+// Step 22
+/**
+ * Converts STX floats to microSTX values.
+ * @param stx Balance value in floating STX
+ */
+export function stxToMicroSTX(stx: number): number {
+  return Math.floor(stx * 1e6);
+}
+
