@@ -140,3 +140,8 @@ test("should convert microSTX numbers to STX floats", () => {
   expect(microSTXtoSTX(2500000)).toBe(2.5);
 });
 
+// Step 96
+test("should convert STX floats to microSTX values", () => {
+  expect(stxToMicroSTX(3.14)).toBe(3140000);
+});
+
