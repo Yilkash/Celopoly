@@ -16,3 +16,9 @@ To prevent block transaction drops due to conflicting nonces under concurrency, 
 ### Gas Price Surge Mitigation on CeloNetwork
 While transaction costs on the Celo Mainnet are extremely low, network activity spikes can elevate minimum fee requirements. Our sub-wallets utilize a dynamic fee buffer calculation (gas limits are scaled by 1.25x of the estimated gas) to prevent transactions from getting stuck in the block sequencer due to insufficient allocated gas.
 
+
+<!-- Step 54 -->
+
+### Hiro API Rate Limit Backoff Rules
+When broadcasting transactions at high frequency on Stacks, our orchestrator accounts for public infrastructure rate limits. If the API returns a `429 Too Many Requests` error, workers intercept the response, implement a randomized exponential backoff delay (ranging from 5 to 30 seconds), and suspend funding loops to protect the master wallet balance.
+
