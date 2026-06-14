@@ -79,3 +79,8 @@ test("should convert input string to correct hexadecimal format", () => {
   expect(toHex("abc")).toBe("0x616263");
 });
 
+// Step 86
+test("should convert hex string back to ascii text", () => {
+  expect(fromHex("0x616263")).toBe("abc");
+});
+
