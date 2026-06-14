@@ -25,3 +25,12 @@ export function formatWei(wei: bigint | string | number, decimals = 4): string {
   return `${integerPart}.${fractionalStr}`;
 }
 
+// Step 3
+/**
+ * Resolves after a specified number of milliseconds.
+ * @param ms Delay in milliseconds
+ */
+export function delay(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
