@@ -41,3 +41,9 @@ test("should generate random number inside constraints", () => {
   expect(val).toBeLessThanOrEqual(10);
 });
 
+// Step 80
+test("should identify valid Celo address format", () => {
+  expect(isValidCeloAddress("0x7E845614CB1D6AB7ED651F27F02F89cc37061A20")).toBe(true);
+  expect(isValidCeloAddress("invalidAddress")).toBe(false);
+});
+
