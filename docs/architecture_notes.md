@@ -130,3 +130,9 @@ The frontend UI polls indexing APIs to display live transaction counters. State 
 ### API Fallback Endpoints Configurations
 To ensure high availability, the TS client initializes with a primary RPC URL and a list of backup public nodes. If primary requests fail with server errors, the client transparently switches to the next fallback node.
 
+
+<!-- Step 73 -->
+
+### Secure Secret Management in Production
+In production, environment secrets are injected at runtime using secure container configurations. Private keys and sensitive mnemonics are never written to disk in plain text or embedded inside static files.
+
