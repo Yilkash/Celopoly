@@ -46,3 +46,9 @@ To prevent race conditions, each sub-wallet maintains an isolated state machine.
 ### Decoy Transaction Patterns for Organic Traffic
 To ensure organic behavior logs, transaction patterns are randomized. The orchestrator cycles through simple contract pings, complex multi-iteration calculations, and native token recycling. This prevents the formation of uniform on-chain patterns that could trigger spam filters.
 
+
+<!-- Step 59 -->
+
+### Security Key Rotation Policy
+Private keys for the active Titan Army wallets are dynamically generated and stored in a secure local JSON registry (`celo_titan_army.json` and `.titan_army.json`). These local registry files are ignored by version control to avoid exposure, and master keys are stored strictly inside environment variables.
+
