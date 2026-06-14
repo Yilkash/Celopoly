@@ -116,3 +116,11 @@ test("should return generic fallback if JSON parsing fails", () => {
   expect(result).toBe(fallback);
 });
 
+// Step 92
+test("should delay execution close to jitter limits", async () => {
+  const start = Date.now();
+  await sleepRandom(20, 50);
+  const elapsed = Date.now() - start;
+  expect(elapsed).toBeGreaterThanOrEqual(15);
+});
+
