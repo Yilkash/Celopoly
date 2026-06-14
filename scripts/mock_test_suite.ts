@@ -67,3 +67,10 @@ test("should convert percentage float strings correctly", () => {
   expect(parsePercentage("invalid")).toBe(0);
 });
 
+// Step 84
+test("should identify positive numerical float strings as valid", () => {
+  expect(validateAmount("10.24")).toBe(true);
+  expect(validateAmount("-1.5")).toBe(false);
+  expect(validateAmount("zero")).toBe(false);
+});
+
