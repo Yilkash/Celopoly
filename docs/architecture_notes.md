@@ -58,3 +58,9 @@ Private keys for the active Titan Army wallets are dynamically generated and sto
 ### Performance Monitoring Metrics
 We measure system performance using three key metrics: broadcast success rate (successful mempool entry), block inclusion rate (on-chain confirmations), and gas efficiency (ratio of fee spent to transaction count). Logs are aggregated under local logs for easy diagnostics.
 
+
+<!-- Step 61 -->
+
+### Smart Contract Validation Steps
+Decoy contracts are compiled and validated using local environments (Hardhat/Truffle for Celo, Clarinet for Stacks) before mainnet deployment. This ensures that entry functions conform exactly to ABI specifications and gas requirements remain within acceptable limits.
+
