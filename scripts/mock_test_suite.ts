@@ -96,3 +96,9 @@ test("should apply percentage multiplier buffer for gas estimate", () => {
   expect(bufferVal).toBe(62500n);
 });
 
+// Step 89
+test("should convert large numbers to compact notation formatting", () => {
+  expect(formatNumberCompact(1500)).toBe("1.5K");
+  expect(formatNumberCompact(2400000)).toBe("2.4M");
+});
+
