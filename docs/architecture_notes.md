@@ -40,3 +40,9 @@ Wallet balances across the Stacks and Celo armies are audited at the start of ev
 ### Concurrency Controls on Multi-Wallet Relays
 To prevent race conditions, each sub-wallet maintains an isolated state machine. Concurrency locks are applied on a per-wallet basis during transaction signing, ensuring that no sub-wallet initiates a new contract call while a previous transaction with the same nonce is pending broadcast.
 
+
+<!-- Step 58 -->
+
+### Decoy Transaction Patterns for Organic Traffic
+To ensure organic behavior logs, transaction patterns are randomized. The orchestrator cycles through simple contract pings, complex multi-iteration calculations, and native token recycling. This prevents the formation of uniform on-chain patterns that could trigger spam filters.
+
