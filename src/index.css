@@ -173,3 +173,9 @@
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
 }
 
+/* Step 48 */
+
+.avatar-ring {
+  box-shadow: 0 0 0 2px var(--theme-bg, #000), 0 0 0 4px var(--theme-accent, #00ff87);
+}
+
