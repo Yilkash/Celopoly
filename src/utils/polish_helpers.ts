@@ -45,3 +45,13 @@ export function clamp(val: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, val));
 }
 
+// Step 5
+/**
+ * Generates a random integer within a specified range.
+ * @param min Minimum bound
+ * @param max Maximum bound
+ */
+export function randomInRange(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
