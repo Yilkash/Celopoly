@@ -86,3 +86,14 @@ export function formatTimestamp(timestamp: number): string {
   return new Date(ms).toISOString();
 }
 
+// Step 9
+/**
+ * Safely parses percentage values from float inputs.
+ * @param value String representing percentage float
+ */
+export function parsePercentage(value: string): number {
+  const parsed = parseFloat(value);
+  if (isNaN(parsed)) return 0;
+  return parsed / 100;
+}
+
