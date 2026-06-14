@@ -258,3 +258,14 @@ export function generateId(): string {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 }
 
+// Step 25
+/**
+ * Truncates an arbitrary string description for summary dashboards.
+ * @param text The input description
+ * @param limit Maximum character limit
+ */
+export function truncateText(text: string, limit = 50): string {
+  if (text.length <= limit) return text;
+  return text.substring(0, limit) + '...';
+}
+
