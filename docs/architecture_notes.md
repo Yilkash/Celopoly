@@ -118,3 +118,9 @@ Transactions that remain unconfirmed for more than 6 hours are considered stale.
 ### Transaction Verification Timeouts
 Verification operations apply a strict 30-second timeout limit. If a node fails to return a transaction receipt or confirmation within this window, the action is flagged as pending and the loop advances to the next wallet.
 
+
+<!-- Step 71 -->
+
+### Frontend Dashboard State Synchronization
+The frontend UI polls indexing APIs to display live transaction counters. State synchronization hooks handle eventual consistency issues, merging local mempool state with confirmed on-chain historical records.
+
