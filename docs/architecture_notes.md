@@ -82,3 +82,9 @@ The orchestrator script executes pre-flight network checks before starting any p
 ### Stacking Rewards Optimization Model
 To maximize yields on Stacks, our orchestrator tracks lockup cycles. Sub-wallets hold minimum microSTX required for execution gas, and surplus STX is funneled back to the master wallet to qualify for pool participation rewards.
 
+
+<!-- Step 65 -->
+
+### Error Handling and Auto-Recovery Flow
+In case of transaction failures, the runner prevents runtime crashes. Custom catch blocks evaluate the error code (e.g. timeout, revert, node rate limit) and log warnings while preserving process execution state.
+
