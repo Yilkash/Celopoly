@@ -4,7 +4,8 @@ import { useGameStore } from '@/store/gameStore'
 
 export function useCeloTx() {
   const chainId = useGameStore((s) => s.chainId)
-  const { writeContract, isPending, isSuccess, error, data } = useWriteContract()
+  const { writeContract: writeContractRaw, isPending, isSuccess, error, data } = useWriteContract()
+  const writeContract = writeContractRaw as any
 
   const getCUSD = () => getCUSDAddress(chainId || 44787)
   const getGame = () => getGameAddress(chainId || 44787)

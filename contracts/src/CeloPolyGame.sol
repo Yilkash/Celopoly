@@ -337,6 +337,33 @@ contract CeloPolyGame is ReentrancyGuard, Ownable {
         emit HouseBuilt(gameId, cell, room.houseCount[cell]);
     }
 
+    function getGameRoom(uint256 gameId) external view returns (
+        Player[4] memory players,
+        uint8 playerCount,
+        uint8 currentTurn,
+        uint8 activePlayerCount,
+        uint32[40] memory propertyOwner,
+        uint8[40] memory houseCount,
+        bool started,
+        bool ended,
+        uint256 lastActionTimestamp,
+        uint128 totalPot
+    ) {
+        GameRoom storage room = games[gameId];
+        return (
+            room.players,
+            room.playerCount,
+            room.currentTurn,
+            room.activePlayerCount,
+            room.propertyOwner,
+            room.houseCount,
+            room.started,
+            room.ended,
+            room.lastActionTimestamp,
+            room.totalPot
+        );
+    }
+
     // ─── INTERNAL HELPERS ─────────────────────────────────────────
     function _executeLanding(uint256 gameId, uint8 playerIdx, uint8 cell, uint256 seed) internal {
         GameRoom storage room = games[gameId];

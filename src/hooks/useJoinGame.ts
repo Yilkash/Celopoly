@@ -8,8 +8,10 @@ export function useJoinGame() {
   const address = useGameStore((s) => s.address)
   const [step, setStep] = useState<'idle' | 'approving' | 'joining'>('idle')
 
-  const { writeContract: writeApprove, isSuccess: approveSuccess, isPending: approvePending } = useWriteContract()
-  const { writeContract: writeJoin, isSuccess: joinSuccess, isPending: joinPending, data: joinTx } = useWriteContract()
+  const { writeContract: writeApproveRaw, isSuccess: approveSuccess, isPending: approvePending } = useWriteContract()
+  const writeApprove = writeApproveRaw as any
+  const { writeContract: writeJoinRaw, isSuccess: joinSuccess, isPending: joinPending, data: joinTx } = useWriteContract()
+  const writeJoin = writeJoinRaw as any
 
   const cUSDAddr = getCUSDAddress(chainId || 44787)
   const gameAddr = getGameAddress(chainId || 44787)

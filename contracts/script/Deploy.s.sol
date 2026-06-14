@@ -9,7 +9,7 @@ import "../src/CeloPolyLeaderboard.sol";
 contract DeployScript is Script {
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        address cUSDAddress = vm.envAddress("CUSD_ALFAJORES"); // Swap to CUSD_MAINNET for mainnet
+        address cUSDAddress = vm.envAddress("CUSD_ADDRESS"); // Load CUSD address from env
 
         vm.startBroadcast(deployerPrivateKey);
 

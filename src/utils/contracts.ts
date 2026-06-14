@@ -2,7 +2,7 @@ export const CUSD_ALFAJORES = '0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1' as co
 export const CUSD_MAINNET   = '0x765DE816845861e75A25fCA122bb6898B8B1282a' as const
 
 export const GAME_CONTRACT_ALFAJORES = '0x0000000000000000000000000000000000000000' as const
-export const GAME_CONTRACT_MAINNET   = '0x435b1d5b1be17d21850949d38b463bb2c357e814' as const
+export const GAME_CONTRACT_MAINNET   = '0xf1f1b06bef90e28b51086e7160588edbb641769f' as const
 
 export const ENTRY_STAKE = 1000000000000000000n
 export const GO_SALARY_WEI = 200000000000000000n
@@ -284,6 +284,36 @@ export const GAME_ABI = [
       { type: 'uint256', indexed: true, name: 'gameId' },
       { type: 'address', indexed: true, name: 'player' },
     ],
+  },
+  {
+    type: 'function',
+    name: 'getGameRoom',
+    inputs: [{ type: 'uint256', name: 'gameId' }],
+    outputs: [
+      {
+        type: 'tuple[4]',
+        name: 'players',
+        components: [
+          { type: 'address', name: 'addr' },
+          { type: 'uint128', name: 'balance' },
+          { type: 'uint8', name: 'position' },
+          { type: 'uint8', name: 'jailTurns' },
+          { type: 'bool', name: 'bankrupt' },
+          { type: 'bool', name: 'hasCommitted' },
+          { type: 'bytes32', name: 'commitment' },
+        ],
+      },
+      { type: 'uint8', name: 'playerCount' },
+      { type: 'uint8', name: 'currentTurn' },
+      { type: 'uint8', name: 'activePlayerCount' },
+      { type: 'uint32[40]', name: 'propertyOwner' },
+      { type: 'uint8[40]', name: 'houseCount' },
+      { type: 'bool', name: 'started' },
+      { type: 'bool', name: 'ended' },
+      { type: 'uint256', name: 'lastActionTimestamp' },
+      { type: 'uint128', name: 'totalPot' },
+    ],
+    stateMutability: 'view',
   },
 ] as const
 

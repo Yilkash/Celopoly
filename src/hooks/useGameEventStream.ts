@@ -25,7 +25,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Turn changed to player ${log.args.newTurnIndex}`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -45,7 +45,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Player rolled ${log.args.die1} + ${log.args.die2}`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -64,7 +64,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Property ${log.args.cell} bought by ${(log.args.buyer as string).slice(0, 6)}`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -84,7 +84,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Rent paid: ${log.args.amount} cUSD`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -101,7 +101,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Player ${(log.args.player as string).slice(0, 6)} bankrupt!`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -119,7 +119,7 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Game ended! Winner: ${(log.args.winner as string).slice(0, 6)}`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 
   useWatchContractEvent({
@@ -132,6 +132,6 @@ export function useGameEventStream(gameId: bigint | null) {
         addLog(`Card drawn: type=${log.args.cardType} index=${log.args.cardIndex}`)
       })
     },
-    query: { enabled: !!gameId },
+    enabled: !!gameId,
   })
 }
