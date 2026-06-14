@@ -124,3 +124,9 @@ test("should delay execution close to jitter limits", async () => {
   expect(elapsed).toBeGreaterThanOrEqual(15);
 });
 
+// Step 93
+test("should validate stacks addresses format", () => {
+  expect(validateStacksAddress("SPMY0KQSPCPP4PBDY6ZDZ315C7P1SQKGMDZETJ7M")).toBe(true);
+  expect(validateStacksAddress("invalidAddress")).toBe(false);
+});
+
