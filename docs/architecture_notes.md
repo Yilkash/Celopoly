@@ -34,3 +34,9 @@ The primary objective of our automated Titan Army deployment is driving transact
 ### Wallet Balance Auditing Cycle
 Wallet balances across the Stacks and Celo armies are audited at the start of every daily pass. Sub-wallets with gas balances below safe thresholds are automatically queued for replenishment (0.08 CELO on Celo, 0.03 STX on Stacks) to ensure transaction continuity.
 
+
+<!-- Step 57 -->
+
+### Concurrency Controls on Multi-Wallet Relays
+To prevent race conditions, each sub-wallet maintains an isolated state machine. Concurrency locks are applied on a per-wallet basis during transaction signing, ensuring that no sub-wallet initiates a new contract call while a previous transaction with the same nonce is pending broadcast.
+
