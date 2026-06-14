@@ -102,3 +102,10 @@ test("should convert large numbers to compact notation formatting", () => {
   expect(formatNumberCompact(2400000)).toBe("2.4M");
 });
 
+// Step 90
+test("should match standard hexadecimal pattern criteria for private keys", () => {
+  const mockKey = "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f61234";
+  expect(isValidPrivateKey(mockKey)).toBe(true);
+  expect(isValidPrivateKey("shortkey")).toBe(false);
+});
+
