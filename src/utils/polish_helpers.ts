@@ -239,3 +239,14 @@ export function stxToMicroSTX(stx: number): number {
   return Math.floor(stx * 1e6);
 }
 
+// Step 23
+/**
+ * Safely checks if two addresses match, case-insensitively.
+ * @param addr1 First address candidate
+ * @param addr2 Second address candidate
+ */
+export function addressEquals(addr1: string, addr2: string): boolean {
+  if (!addr1 || !addr2) return false;
+  return addr1.toLowerCase() === addr2.toLowerCase();
+}
+
