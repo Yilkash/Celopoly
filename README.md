@@ -10,6 +10,7 @@ CeloPoly is a fully decentralized, EVM-compatible multiplayer board game enginee
 - **Provably Fair Mechanics**: Dice rolls, property acquisitions, and card draws are managed entirely via verifiable smart contract logic.
 - **Real Yield & Rent**: Buy properties, collect rent in cUSD, and stack houses on your color sets to bankrupt opponents.
 - **Winner-Takes-All Economy**: The last player standing claims the entire accumulated prize pool directly to their wallet.
+- **Native MiniPay Integration**: Seamlessly integrated with Opera MiniPay for ultra-low friction onboarding, allowing users to connect, stake, and play instantly within the MiniPay ecosystem using stablecoins.
 - **Dynamic Event Streaming**: Powered by `wagmi` and `viem`, the React/Vite frontend listens to live blockchain events for real-time multiplayer synchronization.
 - **Mobile-Optimized**: Designed with a sleek, glassmorphic UI that runs flawlessly on Minipay and mobile Web3 browsers.
 
