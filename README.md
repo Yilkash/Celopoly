@@ -66,3 +66,4 @@ CeloPoly is a fully decentralized, EVM-compatible multiplayer board game enginee
 /* June 25 Polish Pass 23 */
 /* June 25 Polish Pass 25 */
 /* June 25 Polish Pass 26 */
+/* June 25 Polish Pass 28 */
