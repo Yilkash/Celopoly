@@ -49,4 +49,4 @@ CeloPoly is a fully decentralized, EVM-compatible multiplayer board game enginee
 - **Trophy NFT**: `0x9b11ab347fa0d84210cfedb332ea9663ca758008`
 
 ---
-*Built with ❤️ for the Celo Ecosystem.*
+*Built with ❤️ for the Celo Ecosystem.*/* June 25 Polish Pass 6 */
